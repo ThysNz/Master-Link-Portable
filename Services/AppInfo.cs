@@ -12,7 +12,7 @@ public static class AppInfo
     {
         var info = Assembly.GetExecutingAssembly()
             .GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion;
-        if (string.IsNullOrEmpty(info)) return "1.0.0";
+        if (string.IsNullOrEmpty(info)) return "1.1.0";
         var plus = info.IndexOf('+');          // drop the build-metadata suffix (commit hash)
         return plus >= 0 ? info[..plus] : info;
     }

@@ -13,6 +13,9 @@ One thing you need to reach — a name, a short description, any number of Block
 **Block**:
 A titled, collapsible section of a System (default title "Environment"). Holds an Environment table; each row has its own Commands list. A System can have many Blocks ("+ Add block").
 
+**Board view**:
+The read-only page shown when a Board is opened (default). Shows Systems, Blocks, Environment and Command rows as plain text with passwords masked and only the Copy buttons (Copy user, Copy pwd, Copy command); no add/delete/edit controls. "Edit" opens the editable Board page; "Done" there returns to the Board view.
+
 **Environment row**:
 One row in a Block's table: Seq #, Application, Path, User, Password. Path is plain text (URL, file path or UNC path); "Open" hands it to the shell, "Copy user" / "Copy pwd" use the clipboard.
 

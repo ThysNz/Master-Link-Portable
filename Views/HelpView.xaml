@@ -27,9 +27,13 @@
             <TextBlock Style="{StaticResource HelpBody}"
                        Text="A Board groups related Systems (for example &quot;Production Servers&quot;). Each System holds one or more Blocks. A Block is a table of applications, and each application can have its own list of commands." />
 
+            <TextBlock Text="Viewing and editing" Style="{StaticResource HelpHeading}" />
+            <TextBlock Style="{StaticResource HelpBody}"
+                       Text="Opening a board shows a read-only page: you can browse, expand and collapse, and use the Copy buttons (Copy user, Copy pwd and Copy for commands), but nothing can be changed by accident. Passwords stay hidden. Click Edit (top right) to change things, and Done to return to the read-only page." />
+
             <TextBlock Text="Boards and Systems" Style="{StaticResource HelpHeading}" />
             <TextBlock Style="{StaticResource HelpBody}"
-                       Text="On the Boards page choose + New Board, then click a board to open it. Use + New System to add a system, and click the ▸ arrow on its card to open it. Expand All and Collapse All open or close every system on the board. Boards, systems, blocks and rows are renamed by clicking their text and typing." />
+                       Text="On the Boards page choose + New Board, then click a board to open it (click Edit to change it). Use + New System to add a system, and click the ▸ arrow on its card to open it. Expand All and Collapse All open or close every system on the board. Boards, systems, blocks and rows are renamed by clicking their text and typing." />
 
             <TextBlock Text="Blocks and applications" Style="{StaticResource HelpHeading}" />
             <TextBlock Style="{StaticResource HelpBody}"
