@@ -23,7 +23,7 @@ public partial class EnvRowViewModel : ObservableObject
     [ObservableProperty] private string userName = "";
     [ObservableProperty] private string password = "";
     [ObservableProperty] private bool showPassword;
-    [ObservableProperty] private bool commandsExpanded;
+    [ObservableProperty] private bool commandsExpanded = true;
     [ObservableProperty] private ObservableCollection<CommandRowViewModel> commands = new();
 
     public EnvRowViewModel(EnvEntry row, Action<EnvRowViewModel> requestDelete)
