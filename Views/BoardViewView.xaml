@@ -108,8 +108,8 @@
                 </Grid.ColumnDefinitions>
                 <StackPanel Orientation="Horizontal" Grid.Column="0">
                     <Button Content="Boards" Style="{StaticResource LinkButtonStyle}" Command="{Binding GoBackCommand}" />
-                    <TextBlock Text=" / " Style="{StaticResource MutedTextStyle}" Margin="4,0" />
-                    <TextBlock Text="{Binding BoardName}" Style="{StaticResource MutedTextStyle}" Foreground="{StaticResource ForegroundBrush}" />
+                    <TextBlock Text=" / " Style="{StaticResource MutedTextStyle}" Margin="4,0" VerticalAlignment="Center" />
+                    <TextBlock Text="{Binding BoardName}" Style="{StaticResource MutedTextStyle}" Foreground="{StaticResource ForegroundBrush}" VerticalAlignment="Center" />
                 </StackPanel>
                 <Button Grid.Column="1" Content="Edit" Style="{StaticResource PrimaryButtonStyle}" Command="{Binding EditCommand}" />
             </Grid>

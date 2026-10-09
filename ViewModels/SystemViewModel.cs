@@ -16,7 +16,7 @@ public partial class SystemViewModel : ObservableObject
     [ObservableProperty] private string name = "";
     [ObservableProperty] private string? description;
     [ObservableProperty] private string? notes;
-    [ObservableProperty] private bool expanded;
+    [ObservableProperty] private bool expanded = true;
     [ObservableProperty] private bool confirmingDelete;
     [ObservableProperty] private ObservableCollection<BlockViewModel> blocks = new();
 
