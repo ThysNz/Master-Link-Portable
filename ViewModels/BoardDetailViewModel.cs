@@ -58,6 +58,9 @@ public partial class BoardDetailViewModel : ObservableObject
     }
 
     [RelayCommand]
+    private void DoneEditing() => App.Navigation.NavigateTo(new BoardViewModel(BoardId));
+
+    [RelayCommand]
     private void GoBack() => App.Navigation.NavigateTo(new BoardsListViewModel());
 
     [RelayCommand] private void RequestDeleteBoard() => ConfirmingDeleteBoard = true;

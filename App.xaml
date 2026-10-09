@@ -21,6 +21,9 @@
             <DataTemplate DataType="{x:Type vm:BoardsListViewModel}">
                 <views:BoardsListView />
             </DataTemplate>
+            <DataTemplate DataType="{x:Type vm:BoardViewModel}">
+                <views:BoardViewView />
+            </DataTemplate>
             <DataTemplate DataType="{x:Type vm:BoardDetailViewModel}">
                 <views:BoardDetailView />
             </DataTemplate>

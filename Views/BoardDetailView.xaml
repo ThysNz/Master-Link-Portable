@@ -198,6 +198,7 @@
                     <TextBlock Text="{Binding BoardName}" Style="{StaticResource MutedTextStyle}" Foreground="{StaticResource ForegroundBrush}" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Grid.Column="1" Visibility="{Binding ConfirmingDeleteBoard, Converter={StaticResource InverseBoolToVisibilityConverter}}">
+                    <Button Content="Done" Style="{StaticResource PrimaryButtonStyle}" Margin="0,0,12,0" Command="{Binding DoneEditingCommand}" ToolTip="Back to the read-only view" />
                     <Button Content="Delete Board" Style="{StaticResource LinkButtonStyle}" Command="{Binding RequestDeleteBoardCommand}" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Grid.Column="1" Visibility="{Binding ConfirmingDeleteBoard, Converter={StaticResource BoolToVisibilityConverter}}">

@@ -39,7 +39,7 @@ public partial class BoardsListViewModel : ObservableObject
     private void OpenBoard(BoardListItem? item)
     {
         if (item == null) return;
-        App.Navigation.NavigateTo(new BoardDetailViewModel(item.Id));
+        App.Navigation.NavigateTo(new BoardViewModel(item.Id));
     }
 
     [RelayCommand]
