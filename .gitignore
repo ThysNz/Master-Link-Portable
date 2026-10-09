@@ -1,0 +1,7 @@
+bin/
+obj/
+USB/
+*.db
+*.db-shm
+*.db-wal
+crash.log

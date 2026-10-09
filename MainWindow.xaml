@@ -1,0 +1,44 @@
+<Window x:Class="MasterLink.Desktop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Master Link" Height="800" Width="1300"
+        Icon="Assets/icon.ico"
+        Background="{StaticResource AppBackgroundBrush}"
+        FontFamily="Segoe UI">
+    <DockPanel>
+        <Border DockPanel.Dock="Top" Background="{StaticResource CardBrush}"
+                BorderBrush="{StaticResource BorderBrush}" BorderThickness="0,0,0,1"
+                Padding="16,10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image Source="Assets/logo.png" Width="22" Height="22" Margin="0,0,8,0" />
+                    <TextBlock Text="Master Link" FontSize="16" FontWeight="SemiBold"
+                           Foreground="{StaticResource ForegroundBrush}"
+                           VerticalAlignment="Center" />
+                </StackPanel>
+                <Button x:Name="NavMenuButton" Grid.Column="1" Content="&#8942;&#8942;"
+                        Style="{StaticResource IconButtonStyle}"
+                        Click="NavMenuButton_Click" ToolTip="Navigation menu">
+                    <Button.ContextMenu>
+                        <ContextMenu x:Name="NavMenuContextMenu" Placement="Custom" StaysOpen="False"
+                                     CustomPopupPlacementCallback="NavMenuContextMenu_PlacementCallback">
+                            <MenuItem Header="Boards" Click="GoBoards_Click" />
+                            <Separator />
+                            <MenuItem Header="Back Up Database" Click="BackupDatabase_Click" />
+                            <MenuItem Header="Import Database" Click="ImportDatabase_Click" />
+                            <Separator />
+                            <MenuItem Header="Help" Click="GoHelp_Click" />
+                            <MenuItem Header="About" Click="GoAbout_Click" />
+                        </ContextMenu>
+                    </Button.ContextMenu>
+                </Button>
+            </Grid>
+        </Border>
+
+        <ContentControl x:Name="ContentHost" Content="{Binding CurrentViewModel}" />
+    </DockPanel>
+</Window>

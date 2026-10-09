@@ -1,0 +1,63 @@
+<UserControl x:Class="MasterLink.Desktop.Views.HelpView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.Resources>
+        <Style x:Key="HelpHeading" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="Foreground" Value="{StaticResource ForegroundBrush}" />
+            <Setter Property="Margin" Value="0,22,0,6" />
+        </Style>
+        <Style x:Key="HelpBody" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="13" />
+            <Setter Property="Foreground" Value="{StaticResource ForegroundBrush}" />
+            <Setter Property="TextWrapping" Value="Wrap" />
+            <Setter Property="LineHeight" Value="20" />
+        </Style>
+    </UserControl.Resources>
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel MaxWidth="760" Margin="24,32" HorizontalAlignment="Stretch">
+            <Button Content="← Boards" Style="{StaticResource LinkButtonStyle}" HorizontalAlignment="Left"
+                    Command="{Binding GoBackCommand}" />
+            <TextBlock Text="Help" FontSize="22" FontWeight="SemiBold" HorizontalAlignment="Center"
+                       Foreground="{StaticResource ForegroundBrush}" />
+
+            <TextBlock Text="How it is organised" Style="{StaticResource HelpHeading}" />
+            <TextBlock Style="{StaticResource HelpBody}"
+                       Text="A Board groups related Systems (for example &quot;Production Servers&quot;). Each System holds one or more Blocks. A Block is a table of applications, and each application can have its own list of commands." />
+
+            <TextBlock Text="Boards and Systems" Style="{StaticResource HelpHeading}" />
+            <TextBlock Style="{StaticResource HelpBody}"
+                       Text="On the Boards page choose + New Board, then click a board to open it. Use + New System to add a system, and click the ▸ arrow on its card to open it. Expand All and Collapse All open or close every system on the board. Boards, systems, blocks and rows are renamed by clicking their text and typing." />
+
+            <TextBlock Text="Blocks and applications" Style="{StaticResource HelpHeading}" />
+            <TextBlock Style="{StaticResource HelpBody}"
+                       Text="Inside a System, + Add block creates a block (the title defaults to &quot;Environment&quot; and can be changed). In a block, + Add row adds an application with its Path (a web address or a file / network path), User and Password. Seq # numbers the rows automatically." />
+
+            <TextBlock Text="Row buttons" Style="{StaticResource HelpHeading}" />
+            <TextBlock Style="{StaticResource HelpBody}"
+                       Text="Show / Hide reveals the password. Copy user and Copy pwd put the value on the clipboard. Open launches the path: web addresses open in your browser and folders or files open in Windows. ✕ removes the row." />
+
+            <TextBlock Text="Commands" Style="{StaticResource HelpHeading}" />
+            <TextBlock Style="{StaticResource HelpBody}"
+                       Text="Under every application is a collapsed Commands line. Click its arrow to open the list, then + Add command to record a Command and its Purpose. An application can have as many commands as you need. Copy puts a command on the clipboard." />
+
+            <TextBlock Text="Notes" Style="{StaticResource HelpHeading}" />
+            <TextBlock Style="{StaticResource HelpBody}"
+                       Text="Each System has one free-text Notes box under its blocks." />
+
+            <TextBlock Text="Editing and deleting" Style="{StaticResource HelpHeading}" />
+            <TextBlock Style="{StaticResource HelpBody}"
+                       Text="Changes save when you leave a field or press Enter. Press Esc to cancel an edit. Deleting a system, block or board asks for confirmation first; deleting an application also deletes its commands." />
+
+            <TextBlock Text="Backup and moving the app" Style="{StaticResource HelpHeading}" />
+            <TextBlock Style="{StaticResource HelpBody}"
+                       Text="Everything is kept in MasterLink.db next to the program, so the whole folder can be copied to a USB stick. Use the ⋮⋮ menu: Back Up Database saves a copy, Import Database replaces the current data with a chosen backup (the app restarts afterwards)." />
+
+            <TextBlock Text="Keep it safe" Style="{StaticResource HelpHeading}" />
+            <TextBlock Style="{StaticResource HelpBody}"
+                       Text="Passwords are hidden on screen but stored unencrypted in MasterLink.db. Keep the file, and any backups of it, somewhere only you can reach." />
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

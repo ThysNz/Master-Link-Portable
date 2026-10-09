@@ -1,0 +1,22 @@
+<Window x:Class="MasterLink.Desktop.Views.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="About Master Link" Height="360" Width="420"
+        Icon="../Assets/icon.ico"
+        WindowStartupLocation="CenterOwner" ResizeMode="NoResize" ShowInTaskbar="False"
+        Background="{StaticResource CardBrush}" FontFamily="Segoe UI">
+    <StackPanel Margin="28,24" HorizontalAlignment="Center">
+        <Image Source="../Assets/logo.png" Width="96" Height="96" HorizontalAlignment="Center" />
+        <TextBlock Text="Master Link" FontSize="22" FontWeight="SemiBold" HorizontalAlignment="Center" Margin="0,12,0,0"
+                   Foreground="{StaticResource ForegroundBrush}" />
+        <TextBlock x:Name="VersionText" Text="Version" HorizontalAlignment="Center" Margin="0,2,0,0"
+                   Style="{StaticResource MutedTextStyle}" />
+        <TextBlock Text="A portable board of systems, with the links, logins and commands to reach them."
+                   TextWrapping="Wrap" TextAlignment="Center" Margin="0,14,0,0"
+                   Foreground="{StaticResource ForegroundBrush}" FontSize="12" />
+        <TextBlock x:Name="DbText" TextWrapping="Wrap" TextAlignment="Center" Margin="0,12,0,0"
+                   Style="{StaticResource MutedTextStyle}" FontSize="11" />
+        <Button Content="Close" Style="{StaticResource PrimaryButtonStyle}" Width="80" Margin="0,18,0,0"
+                IsDefault="True" IsCancel="True" Click="Close_Click" />
+    </StackPanel>
+</Window>
